@@ -1,5 +1,19 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { COMMENTS } from '../../app/shared/COMMENTS';
 
-export const selectCommentsByCampsiteId = (campsiteID) => {
-    return COMMENTS.filter((comment) => comment.campsiteId === parseInt(campsiteID));
+const initialState = {
+    commentsArray: COMMENTS
+};
+
+const commentsSlice = createSlice({
+    name: 'comments',
+    initialState
+});
+
+export const commentsReducer = commentsSlice.reducer;
+
+export const selectCommentsByCampsiteId = (campsiteID) => (state) => {
+    return state.comments.commentsArray.filter(
+        (comment) => comment.campsiteId === parseInt(campsiteID)
+    );
 };
