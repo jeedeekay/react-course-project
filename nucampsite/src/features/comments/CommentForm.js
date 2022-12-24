@@ -17,9 +17,9 @@ const CommentForm = ({ campsiteId }) => {
             text: values.commentText,
             date: new Date(Date.now()).toISOString()
         }
-    console.log('comment:', comment);
-    dispatch(addComment(comment));
-    setModalOpen(false);
+        console.log('comment:', comment);
+        dispatch(addComment(comment));
+        setModalOpen(false);
     }
 
     return (
