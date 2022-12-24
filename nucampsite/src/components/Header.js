@@ -45,7 +45,7 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                 </Nav>
-                <UserLoginForm></UserLoginForm>
+                <UserLoginForm />
             </Collapse>
         </Navbar>
     );
